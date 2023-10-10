@@ -114,7 +114,7 @@ services:
       - --log.level
       - ${LOG_LEVEL}
       - --l2
-      - http://base-geth:8551
+      - ${L2_CONNECTION_KIND:-http}://base-geth:8551
       - --l2.jwt-secret
       - /var/lib/base-node/ee-secret/jwtsecret
       - --rollup.config
