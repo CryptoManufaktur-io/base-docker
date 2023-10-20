@@ -40,9 +40,20 @@ determine_distro() {
 }
 
 determine_sudo() {
+    if [[ "$__distro" =~ "debian" || "$__distro" = "ubuntu" ]]; then
+        systemctl status docker >/dev/null
+        result=$?
+        if [ ! "${result}" -eq 0 ]; then
+            echo "The Docker daemon is not running. Please check Docker installation."
+            echo "\"sudo systemctl status docker\" and \"sudo journalctl -fu docker\" will be helpful."
+            echo "Aborting."
+            exit 1
+        fi
+    fi
+
     __maybe_sudo=""
     if ! docker images >/dev/null 2>&1; then
-        echo "Will use sudo to access docker"
+        echo "Will use sudo to access Docker"
         __maybe_sudo="sudo"
     fi
 }
