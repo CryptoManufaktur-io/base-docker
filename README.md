@@ -21,4 +21,4 @@ Adjust variables as needed, particularly `NETWORK`, `BASENODE_P2P_BOOTNODES` and
 
 To update the software, run `./ethd update` and then `./ethd up`
 
-This is base-docker v1.0.0
+This is base-docker v1.1.0

@@ -29,6 +29,8 @@ services:
     entrypoint:
       - docker-entrypoint.sh
       - geth
+      - --op-network
+      - base-${NETWORK}
       - --datadir
       - /var/lib/base-geth
       - --rollup.sequencerhttp
