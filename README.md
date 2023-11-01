@@ -1,3 +1,7 @@
+# Deprecation
+
+This project has been sunset. Please use [Optimism Docker](https://github.com/CryptoManufaktur-io/optimism-docker) instead.
+
 # Overview
 
 docker compose for Coinbase Base L2.

@@ -735,3 +735,5 @@ elif [ "${__old_compose}" -eq 1 ]; then
   echo "${__project_name} cannot do for you."
   echo "Please see https://ethdocker.com/Usage/Prerequisites#switching-from-dockerio-to-docker-ce for instructions."
 fi
+
+echo "This project has been sunset. Please use Optimism Docker instead: https://github.com/CryptoManufaktur-io/optimism-docker"
